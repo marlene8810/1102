@@ -36,5 +36,13 @@ public class Bullet : MonoBehaviour
             other.gameObject.SetActive(false);
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.tag == "Enemy")
+        {
+            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+        }
     }
+
+
 }
